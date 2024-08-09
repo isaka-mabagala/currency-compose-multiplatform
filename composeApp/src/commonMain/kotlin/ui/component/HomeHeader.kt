@@ -44,6 +44,7 @@ import currencyapp.composeapp.generated.resources.ic_currency_exchange
 import currencyapp.composeapp.generated.resources.ic_refresh
 import currencyapp.composeapp.generated.resources.ic_switch_right
 import domain.model.Currency
+import domain.model.CurrencyCode
 import domain.model.DisplayResult
 import domain.model.RateStatus
 import domain.model.RequestState
@@ -209,7 +210,7 @@ fun RowScope.CurrencyView(
                 onSuccess = { data ->
                     Icon(
                         modifier = Modifier.size(24.dp),
-                        painter = painterResource(Res.drawable.ic_currency_exchange),
+                        painter = painterResource(CurrencyCode.valueOf(data.code).flag),
                         tint = Color.Unspecified,
                         contentDescription = "Country Flag"
                     )
