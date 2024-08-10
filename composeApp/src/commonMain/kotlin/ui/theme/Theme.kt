@@ -93,6 +93,7 @@ fun AppTheme(
     }
 
     MaterialTheme(
+        typography = PoppinsTypography(),
         colorScheme = colorScheme,
         content = content
     )

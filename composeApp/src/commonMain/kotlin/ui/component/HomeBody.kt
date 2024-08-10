@@ -25,6 +25,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -60,11 +61,11 @@ fun HomeBody(
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = "${(animatedExchangeAmount * 100).toLong() / 100.0}",
-                fontSize = 24.sp,
+                fontSize = 42.sp,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
                 textAlign = TextAlign.Center
             )
-            Spacer(modifier = Modifier.height(20.dp))
             AnimatedVisibility(visible = source.isSuccess() && target.isSuccess()) {
                 val targetExchangeAmount = convertExchangeAmount(
                     amount = 1.0,
