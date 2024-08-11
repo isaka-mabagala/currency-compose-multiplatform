@@ -10,7 +10,7 @@ import ui.theme.AppTheme
 fun App() {
     initializeKoin()
 
-    AppTheme() {
+    AppTheme {
         Navigator(HomeScreen())
     }
 }

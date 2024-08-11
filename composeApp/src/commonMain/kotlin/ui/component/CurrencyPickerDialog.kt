@@ -108,7 +108,8 @@ private fun CurrencyPickerTitle(text: String) {
         modifier = Modifier.padding(horizontal = 20.dp),
         text = text,
         fontSize = 22.sp,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        color = MaterialTheme.colorScheme.onSurface
     )
 }
 
@@ -171,7 +172,7 @@ private fun CurrencyPickerSelector(isSelected: Boolean = false) {
         targetValue = if (isSelected) {
             MaterialTheme.colorScheme.tertiaryContainer
         } else {
-            MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.1f)
+            MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.3f)
         },
         animationSpec = tween(durationMillis = 300)
     )
@@ -215,7 +216,7 @@ private fun CurrencyPickerAction(
         TextButton(onClick = onDoneClick) {
             Text(
                 text = "Confirm",
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.primary
             )
         }
     }

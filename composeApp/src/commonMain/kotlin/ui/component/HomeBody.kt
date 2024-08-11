@@ -96,8 +96,8 @@ fun HomeBody(
                     shape = RoundedCornerShape(99.dp)
                 ),
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = Color.White
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.onPrimaryContainer
             ),
             onClick = {
                 if (source.isSuccess() && target.isSuccess()) {
@@ -114,7 +114,8 @@ fun HomeBody(
         ) {
             Text(
                 text = "Convert",
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold
             )
         }
         Spacer(modifier = Modifier.height(24.dp))

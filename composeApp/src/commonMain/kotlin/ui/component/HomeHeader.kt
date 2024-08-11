@@ -49,6 +49,7 @@ import domain.model.CurrencyType
 import domain.model.DisplayResult
 import domain.model.RateStatus
 import domain.model.RequestState
+import getPlatform
 import org.jetbrains.compose.resources.painterResource
 import util.displayCurrentDateTime
 
@@ -68,6 +69,7 @@ fun HomeHeader(
             .fillMaxWidth()
             .clip(shape = RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp))
             .background(color = MaterialTheme.colorScheme.primaryContainer)
+            .padding(top = if (getPlatform().name == "Android") 0.dp else 24.dp)
             .padding(all = 24.dp)
     ) {
         Spacer(modifier = Modifier.height(24.dp))
