@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Icon
@@ -40,7 +41,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import currencyapp.composeapp.generated.resources.Res
-import currencyapp.composeapp.generated.resources.ic_currency_exchange
+import currencyapp.composeapp.generated.resources.app_logo
 import currencyapp.composeapp.generated.resources.ic_refresh
 import currencyapp.composeapp.generated.resources.ic_switch_right
 import domain.model.Currency
@@ -105,8 +106,10 @@ fun RatesStatus(
     ) {
         Row {
             Image(
-                modifier = Modifier.size(50.dp),
-                painter = painterResource(Res.drawable.ic_currency_exchange),
+                modifier = Modifier
+                    .size(50.dp)
+                    .clip(CircleShape),
+                painter = painterResource(Res.drawable.app_logo),
                 contentDescription = "App Logo"
             )
             Spacer(modifier = Modifier.width(16.dp))
